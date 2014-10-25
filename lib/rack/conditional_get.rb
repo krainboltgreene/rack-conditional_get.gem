@@ -11,7 +11,7 @@ module Rack
   #
   # Adapted from Michael Klishin's Merb implementation:
   # https://github.com/wycats/merb/blob/master/merb-core/lib/merb-core/rack/middleware/conditional_get.rb
-  module ConditionalGet
+  class ConditionalGet
     require_relative "conditional_get/version"
     VERB_KEY = "REQUEST_METHOD"
     MODIFIED_SINCE_KEY = "HTTP_IF_MODIFIED_SINCE"
