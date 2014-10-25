@@ -75,7 +75,7 @@ module Rack
       verb == "GET"
     end
 
-    private def get?
+    private def head?
       verb == "HEAD"
     end
 
