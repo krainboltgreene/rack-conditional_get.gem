@@ -13,13 +13,13 @@ rack/conditional_get
 - [![Version](http://img.shields.io/gem/v/rack-conditional_get.svg?style=flat-square)](https://rubygems.org/gems/rack-conditional_get)
 
 
-TODO: Write a gem description
+A middleware for handling the conditional GET request mechanics.
 
 
 Using
 =====
 
-TODO: Write usage instructions here
+Simply add to your middleware stack.
 
 
 Installing
