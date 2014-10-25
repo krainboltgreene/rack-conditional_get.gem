@@ -25,7 +25,7 @@ module Rack
 
     def call(env)
       @env = env
-      @status, @headers, @body = @app.call(environment)
+      @status, @headers, @body = @app.call(@env)
       if (get? || head?) && (@status == 200 && fresh?)
         @status = 304
         headers.delete("Content-Type")
@@ -35,16 +35,12 @@ module Rack
         end
         [@status, @headers, body]
       else
-        @app.call(env)
+        @app.call(@env)
       end
     end
 
     private def fresh?
       modified_since || etag_matches?
-    end
-
-    private def env
-      @env
     end
 
     private def headers
@@ -84,7 +80,7 @@ module Rack
     end
 
     private def verb
-      env[VERB_KEY]
+      @env[VERB_KEY]
     end
   end
 end
