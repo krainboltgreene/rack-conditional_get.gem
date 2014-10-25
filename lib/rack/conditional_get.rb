@@ -19,8 +19,8 @@ module Rack
     ETAG_KEY = "ETag"
     LAST_MODIFIED_KEY = "Last-Modified"
 
-    def initialize(stack)
-      @stack = stack
+    def initialize(app)
+      @app = app
     end
 
     def call(env)
