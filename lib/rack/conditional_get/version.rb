@@ -1,5 +1,5 @@
 module Rack
-  module ConditionalGet
-    VERSION = "2.0.0"
+  class ConditionalGet
+    VERSION = "3.0.0"
   end
 end
